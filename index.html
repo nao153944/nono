@@ -347,7 +347,7 @@ var rh = new Array(
       function firstscript(){
          var i=0;
          while( i<list.length ){
-            loadlist = JSON.parse(localStorage.getItem('tsave'+list[i]));
+            loadlist = JSON.parse(localStorage.getItem('nsave'+list[i]));
             if(loadlist == "true"){
                loadcheckbox = document.getElementById(list[i]);
                loadcheckbox.checked = true;
@@ -363,10 +363,10 @@ var rh = new Array(
           while( i<list.length ){
              loadcheckbox = document.getElementById(list[i]);
              if(loadcheckbox.checked == true){
-                  localStorage.setItem('tsave'+list[i],JSON.stringify("true"));
+                  localStorage.setItem('nsave'+list[i],JSON.stringify("true"));
              }
              else{
-                  localStorage.setItem('tsave'+list[i],JSON.stringify("false"));
+                  localStorage.setItem('nsave'+list[i],JSON.stringify("false"));
              }
              i++;
           }
@@ -383,7 +383,7 @@ var rh = new Array(
       function Delete(){
           var i = 0;
           while( i<list.length ){
-             localStorage.removeItem('tsave'+list[i]);
+             localStorage.removeItem('nsave'+list[i]);
              loadcheckbox = document.getElementById(list[i]);
              if(loadcheckbox.checked == true){
                   loadcheckbox.checked = false;
@@ -408,7 +408,7 @@ var rh = new Array(
       function FavoriteOn() {
           var i = 0;
           while( i<list.length ){
-             loadlist = JSON.parse(localStorage.getItem('tsave'+list[i]));
+             loadlist = JSON.parse(localStorage.getItem('nsave'+list[i]));
              if(loadlist == "true"){
                 loadcontent = document.getElementById("c-"+list[i]);
                 loadcontent.classList.remove("c-active-none");
