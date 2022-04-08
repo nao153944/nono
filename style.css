@@ -1,0 +1,235 @@
+@media screen and (min-width: 767px) {
+body{
+   zoom: 67%;
+}
+}
+@media screen and (max-width: 767px) {
+body{
+   zoom: 60%;
+}
+}
+
+body{
+   width: auto;
+   height: auto;
+   background-color: wheat;
+}
+
+.snslink{
+   width: 80px;
+   height: 100%;
+   text-align: center;
+   position: fixed;
+   left: 520px;
+   top: 45%;
+}
+
+.fa-stack{
+    margin-top: 10px;
+}
+
+.circle-twitter{
+    color: #1DA1F2;
+}
+
+.fa-youtube{
+    color: #DA1725;
+}
+
+.circle-youtube{
+    color: #FFFFFF;
+}
+
+.circle-rinrin{
+    color: orange;
+}
+
+.circle-trash{
+    color: mediumblue;
+}
+
+.circle-up{
+    color: hotpink;
+}
+
+
+
+.favorite{
+   width: 480px;
+   height: 60px;
+   text-align: center;
+   background-color: lawngreen;
+}
+
+
+.favorite-checkbox{
+   width: 25px;
+   height: 25px;
+   margin-top: 15px;
+   position: relative;
+   top: 3px;
+}
+
+
+.c-text-favorite{
+   font-size: 25px;
+   font-weight: bold;
+   color: black;
+}
+
+.c-text-select{
+   font-size: 20px;
+   font-weight: bold;
+   color: black;
+}
+
+
+.form{
+   width: 480px;
+   height: 60px;
+   text-align: center;
+   background-color: springgreen;
+}
+.select4{
+   width: 420px;
+   height: 35px;
+   text-align: center;
+   margin-top: 12px;
+}
+input[type=search]{
+  font-size: 27px;
+  transform: scale(1.0);
+}
+
+
+
+
+.select{
+   width: 480px;
+   height: 60px;
+   text-align: center;
+   background-color: lawngreen;
+}
+
+.select1{
+   width: 150px;
+   height: 50px;
+   margin: 5px;
+   font-size: 20px;
+   background-color: white;
+}
+
+.select3{
+   width: 150px;
+   height: 50px;
+   margin: 5px;
+   font-size: 20px;
+   background-color: white;
+}
+
+.radio{
+   width: 480px;
+   height: 60px;
+   font-size: 20px;
+   font-weight: bold;
+   background-color: springgreen;
+}
+.r-text{
+   font-size: 20px;
+   font-weight: bold;
+   color: black;
+   margin-left: 40px;
+}
+.r-button{
+   width: 50px;
+   height: 30px;
+   top: 8px;
+   left: 50px;
+   position: relative;
+   margin-top: 10px;
+}
+
+
+.content{
+    width: 480px;
+    height: auto;
+    background-color: orchid;
+    text-align: center;
+}
+
+
+.checkbox{
+   width: 25px;
+   height: 25px;
+   position: relative;
+   top: 10px;
+   vertical-align: middle;
+}
+
+
+.c-button{
+   width: 400px;
+   height: 60px;
+   margin: 5px;
+   background-color: white;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+
+.c-button:hover{
+   background-color: beige;
+}
+
+
+c-text-title{
+   font-size: 20px;
+   font-weight: bold;
+   color: black;
+}
+
+c-text-youtube{
+   font-size: 15px;
+   font-weight: bold;
+   color: black;
+}
+
+c-text-title-m{
+   font-size: 14px;
+   font-weight: bold;
+   color: black;
+}
+
+c-text-title-m-list{
+   font-size: 11px;
+   font-weight: bold;
+   color: black;
+}
+
+c-text-youtube-m{
+   font-size: 11px;
+   font-weight: bold;
+   color: black;
+}
+
+.c-active-none{
+    display: none;
+}
+
+
+.c-select-none{
+    display: none;
+}
+
+.c-select2-none{
+    display: none;
+}
+
+.c-select3-none{
+    display: none;
+}
+
+.c-select4-none{
+    display: none;
+}

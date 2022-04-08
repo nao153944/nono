@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+    
+    
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNZSEGEX5G"></script>
+       <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-QNZSEGEX5G');
+      </script> 
+    
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>nono1.0</title>
+  <link rel="shortcut icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> 
+</head>
+
+
+    
+<body>
+    
+    <div class="snslink">
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-twitter"></i>
+           <a href="https://twitter.com/tsukushi_aria" target="_blank"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+        </span>
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-youtube"></i>
+           <a href="https://www.youtube.com/channel/UC5XQhzMH08PgWa4Zp02Gcsw/featured" target="_blank"><i class="fab fa-youtube fa-stack-1x"></i></a>
+        </span>      
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-trash"></i>
+           <i class="far fa-trash-alt fa-stack-1x fa-inverse" onclick="ConfirmAlert()"></i>
+        </span> 
+        
+        <span class="fa-stack fa-2x fa-lg" onclick="scrolltop()">
+           <i class="fa fa-circle fa-stack-2x circle-up"></i>
+           <i class="fas fas fa-chevron-up fa-stack-1x fa-inverse"></i>
+        </span>
+        
+        <span class="fa-stack fa-2x fa-lg" onclick="scrollunder()">
+           <i class="fa fa-circle fa-stack-2x circle-up"></i>
+           <i class="fas fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+        </span>
+        
+    </div>
+    
+    
+    <div class ="favorite">
+       <input type="checkbox" class="favorite-checkbox" id="favorite" onclick="FavoriteCheck()" >
+       <label class="c-text-favorite" for="favorite-checkbox">お気に入り</label>
+    </div>
+    
+    
+    <div class="form">
+      <input type="search" class="select4" id="select4" placeholder="曲名を入力" onchange="SelectCheck()">
+    </div>
+    
+    
+    <div class ="select">
+       <label class="c-text-select">歌手名</label>
+       <select id="select3" class="select3" onchange="SelectCheck()">
+          <option value="none">選択なし</option>
+                  <option value="Aimer">Aimer</option>
+                  <option value="DECO*27">DECO*27</option>
+                  <option value="EGOIST">EGOIST</option>
+                  <option value="HoneyWorks">HoneyWorks</option>
+                  <option value="mona(夏川椎菜)">mona(夏川椎菜)</option>
+                  <option value="n-buna">n-buna</option>
+                  <option value="Neru">Neru</option>
+                  <option value="YOASOBI">YOASOBI</option>
+                  <option value="ツミキ">ツミキ</option>
+                  <option value="ピノキオピー">ピノキオピー</option>
+                  <option value="みきとP">みきとP</option>
+                  <option value="ヨルシカ">ヨルシカ</option>
+                  <option value="れるりり">れるりり</option>
+                  <option value="安次嶺希和子">安次嶺希和子</option>
+                  <option value="千石撫子(花澤香菜)">千石撫子(花澤香菜)</option>
+                  <option value="涼宮ハルヒ(平野綾)">涼宮ハルヒ(平野綾)</option>
+                  <option value="緑黄色社会">緑黄色社会</option>
+                <optgroup label=""></optgroup>
+       </select>
+  
+
+       <label class="c-text-select">配信日</label>
+       <select id="select1" class="select1" onchange="SelectCheck()">
+          <option value="none">選択なし</option>
+                  <option value="2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】">2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</option>
+                  <option value="2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】">2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</option>
+                  <option value="2022/04/02【初配信】はじめまして！彩雲ののです！【#つばぐら】">2022/04/02【初配信】はじめまして！彩雲ののです！【#つばぐら】</option>
+                  <option value="2022/04">2022/04</option>
+                <optgroup label=""></optgroup>
+       </select>
+    </div>
+
+    <div class ="radio">
+       <input class="r-button" type="radio" name="q1" value="デフォルト" onclick="RadioCheck()" checked>
+          <label class="r-text">デフォルト</label>
+       <input class="r-button" type="radio" name="q1" value="配信順" onclick="RadioCheck()">
+          <label class="r-text">配信順</label>
+    </div>
+
+
+<div class ="content" id="content">
+
+              <div id="c-1-1">
+           <input type="checkbox" class="checkbox" id="1-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=RpxW5v__ppI\x26t=88s')">
+              <c-text-title id="al-c-1-1" class="安次嶺希和子">忘れじの言の葉</c-text-title><br>
+              <c-text-youtube>2022/04/02【初配信】はじめまして！彩雲ののです！【#つばぐら】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-2-1">
+           <input type="checkbox" class="checkbox" id="2-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=1459s')">
+              <c-text-title id="al-c-2-1" class="ヨルシカ">花泥棒</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-3-1">
+           <input type="checkbox" class="checkbox" id="3-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=2435s')">
+              <c-text-title id="al-c-3-1" class="涼宮ハルヒ(平野綾)">God knows...</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-4-1">
+           <input type="checkbox" class="checkbox" id="4-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=4090s')">
+              <c-text-title id="al-c-4-1" class="YOASOBI">三原色</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-5-1">
+           <input type="checkbox" class="checkbox" id="5-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=4886s')">
+              <c-text-title id="al-c-5-1" class="ツミキ">フォニイ</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-6-1">
+           <input type="checkbox" class="checkbox" id="6-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=5840s')">
+              <c-text-title id="al-c-6-1" class="EGOIST">名前のない怪物</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-7-1">
+           <input type="checkbox" class="checkbox" id="7-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=6556s')">
+              <c-text-title id="al-c-7-1" class="千石撫子(花澤香菜)">恋愛サーキュレーション</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-8-1">
+           <input type="checkbox" class="checkbox" id="8-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=7652s')">
+              <c-text-title id="al-c-8-1" class="mona(夏川椎菜)">ファンサ</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-9-1">
+           <input type="checkbox" class="checkbox" id="9-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=9780s')">
+              <c-text-title id="al-c-9-1" class="Aimer">RE:I AM</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-10-1">
+           <input type="checkbox" class="checkbox" id="10-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=daYGLzvuI9A\x26t=10670s')">
+              <c-text-title id="al-c-10-1" class="緑黄色社会">Mela!</c-text-title><br>
+              <c-text-youtube>2022/04/04【歌枠】はじめてのうた【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-11-1">
+           <input type="checkbox" class="checkbox" id="11-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=666s')">
+              <c-text-title id="al-c-11-1" class="みきとP">少女レイ</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-12-1">
+           <input type="checkbox" class="checkbox" id="12-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=1274s')">
+              <c-text-title id="al-c-12-1" class="HoneyWorks">金曜日のおはよう</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-13-1">
+           <input type="checkbox" class="checkbox" id="13-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=1858s')">
+              <c-text-title id="al-c-13-1" class="Neru">東京テディベア</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-14-1">
+           <input type="checkbox" class="checkbox" id="14-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=2418s')">
+              <c-text-title id="al-c-14-1" class="れるりり">脳漿炸裂ガール</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-15-1">
+           <input type="checkbox" class="checkbox" id="15-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=2987s')">
+              <c-text-title id="al-c-15-1" class="みきとP">ロキ</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-16-1">
+           <input type="checkbox" class="checkbox" id="16-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=3746s')">
+              <c-text-title id="al-c-16-1" class="n-buna">夜明けと蛍</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-17-1">
+           <input type="checkbox" class="checkbox" id="17-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=4684s')">
+              <c-text-title id="al-c-17-1" class="みきとP">サリシノハラ</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-18-1">
+           <input type="checkbox" class="checkbox" id="18-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=5378s')">
+              <c-text-title id="al-c-18-1" class="ピノキオピー">神っぽいな</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-19-1">
+           <input type="checkbox" class="checkbox" id="19-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=5961s')">
+              <c-text-title id="al-c-19-1" class="DECO*27">おじゃま虫</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-20-1">
+           <input type="checkbox" class="checkbox" id="20-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=BUvgTF_A0Bo\x26t=6635s')">
+              <c-text-title id="al-c-20-1" class="DECO*27">ヒバナ</c-text-title><br>
+              <c-text-youtube>2022/04/07【歌枠】ボカロ縛りでうたう【彩雲のの/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+      
+
+    </div>
+
+   <script type="text/javascript">
+       
+       
+var list = new Array(
+"1-1",
+"2-1",
+"3-1",
+"4-1",
+"5-1",
+"6-1",
+"7-1",
+"8-1",
+"9-1",
+"10-1",
+"11-1",
+"12-1",
+"13-1",
+"14-1",
+"15-1",
+"16-1",
+"17-1",
+"18-1",
+"19-1",
+"20-1",
+);
+
+
+
+
+
+var rh = new Array(
+"1-1",
+"2-1",
+"3-1",
+"4-1",
+"5-1",
+"6-1",
+"7-1",
+"8-1",
+"9-1",
+"10-1",
+"11-1",
+"12-1",
+"13-1",
+"14-1",
+"15-1",
+"16-1",
+"17-1",
+"18-1",
+"19-1",
+"20-1",
+);
+
+
+
+
+       
+       
+      var loadcontent;
+      var loadcheckbox;
+      var loadlist;
+       
+      window.onload = firstscript();
+      
+       
+       
+      function firstscript(){
+         var i=0;
+         while( i<list.length ){
+            loadlist = JSON.parse(localStorage.getItem('tsave'+list[i]));
+            if(loadlist == "true"){
+               loadcheckbox = document.getElementById(list[i]);
+               loadcheckbox.checked = true;
+            }
+            i++;
+         }
+      }
+       
+       
+       
+      function Save() {
+          var i = 0;
+          while( i<list.length ){
+             loadcheckbox = document.getElementById(list[i]);
+             if(loadcheckbox.checked == true){
+                  localStorage.setItem('tsave'+list[i],JSON.stringify("true"));
+             }
+             else{
+                  localStorage.setItem('tsave'+list[i],JSON.stringify("false"));
+             }
+             i++;
+          }
+      }
+      
+      
+      function ConfirmAlert(){
+          var message = "保存データを削除しますか？";
+          if(confirm(message)){
+             Delete();
+          }
+      } 
+       
+      function Delete(){
+          var i = 0;
+          while( i<list.length ){
+             localStorage.removeItem('tsave'+list[i]);
+             loadcheckbox = document.getElementById(list[i]);
+             if(loadcheckbox.checked == true){
+                  loadcheckbox.checked = false;
+             }
+             i++;
+          }
+      } 
+       
+       
+      function FavoriteCheck() {
+         loadcheckbox = document.getElementById("favorite");
+         if(loadcheckbox.checked == true){
+            FavoriteOn();
+         }
+         else{
+            FavoriteOff();
+         }
+         SelectCheck();
+      } 
+    
+       
+      function FavoriteOn() {
+          var i = 0;
+          while( i<list.length ){
+             loadlist = JSON.parse(localStorage.getItem('tsave'+list[i]));
+             if(loadlist == "true"){
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.remove("c-active-none");
+             }
+             else{
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.add("c-active-none");
+             }
+             i++;
+          }
+      }
+       
+      function FavoriteOff() {
+          var i = 0;
+          while( i<list.length ){
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.remove("c-active-none");
+             i++;
+          }
+      }
+        
+      
+      function SelectCheck() {
+         var select1check = document.getElementById("select1");
+         var select2check = document.getElementById("select4");
+         var select3check = document.getElementById("select3");
+         var i = 0;
+         while( i<list.length ){
+            loadcontent = document.getElementById("c-"+list[i]);
+            loadcontent.classList.remove("c-select-none");
+            loadcontent.classList.remove("c-select2-none");
+            loadcontent.classList.remove("c-select3-none");
+            i++;
+         }  
+         if(select1check.value != "none"){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("c-"+list[i]);
+               if(loadcontent.textContent.indexOf(select1check.value) == -1 ){
+                  loadcontent.classList.add("c-select-none");
+               }
+               i++;
+            }
+         }
+         if(select2check.value != "" || select2check.value != null){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("al-c-"+list[i]);
+               if(loadcontent.textContent.indexOf(select2check.value) == -1){
+                  loadcontent = document.getElementById("c-"+list[i]);
+                  loadcontent.classList.add("c-select2-none");       
+               }
+               i++
+            }
+         }
+         if(select3check.value != "none"){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("al-c-"+list[i]);
+               if(loadcontent.classList != select3check.value){
+                   loadcontent = document.getElementById("c-"+list[i]);
+                   loadcontent.classList.add("c-select3-none");
+               }
+               i++;
+            }
+         }
+      } 
+       
+       
+      
+      function RadioCheck(){
+         var radiocheck = document.getElementsByName('q1'); 
+         var i = 0;
+         while(i<radiocheck.length){
+            if(radiocheck[i].checked == true){
+               radiocheck = radiocheck[i].value;
+            }
+            i++;
+         }
+         var element = document.getElementById("content");
+
+         if(radiocheck == "デフォルト"){
+             var i=0;
+             while(i<list.length){
+                var elementload = document.getElementById("c-"+ list[i]);
+                element.insertBefore(elementload,element.children[element.lastChild]);
+                i++;
+             }
+         } 
+         else if(radiocheck == "配信順"){
+             var i=0;
+             while(i<rh.length){
+                var elementload = document.getElementById("c-"+ rh[i]);
+                element.insertBefore(elementload,element.children[element.lastChild]);
+                i++;
+             }
+         }
+      }  
+       
+       
+       
+      function scrolltop(){
+         window.scroll({top: 0, behavior: 'smooth'});
+      };  
+       
+      function scrollunder(){
+         var element = document.documentElement;
+         var bottom = element.scrollHeight - element.clientHeight;
+         window.scrollTo({top: bottom, left: 0, behavior: 'smooth'});
+      };   
+       
+       
+       
+      function OpenWindow(url) {
+         window.open(url,"blank","width=800,height=720,left=900,top=100");
+      } 
+       
+       
+       
+       
+   </script>
+    
+
+
+    
+</body>
+    
+    
+    
+    
+    
+</html>
