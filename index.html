@@ -1001,7 +1001,10 @@ var rh = new Array(
                   localStorage.setItem('nsave'+list[i],JSON.stringify("true"));
              }
              else{
-                  localStorage.setItem('nsave'+list[i],JSON.stringify("false"));
+                 loadlist = JSON.parse(localStorage.getItem('nsave'+list[i]));
+                 if(loadlist == "true"){
+                    localStorage.removeItem('nsave'+list[i]);
+                 }
              }
              i++;
           }
