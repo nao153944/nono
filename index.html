@@ -1343,6 +1343,20 @@ var rh = new Array(
             }
             i++;
          }
+                    
+         loadlist = JSON.parse(localStorage.getItem('nsavefavorite'));
+         if(loadlist == "true"){
+            loadcheckbox = document.getElementById('favorite');
+            loadcheckbox.checked = true;
+            FavoriteOn();
+         }
+          
+         loadlist = JSON.parse(localStorage.getItem('nsaveradio')); 
+         if(loadlist == "1"){
+            loadcheckbox = document.getElementsByName('q1');
+            loadcheckbox[1].checked = true;
+         } 
+         RadioCheck();
       }
        
        
@@ -1382,6 +1396,8 @@ var rh = new Array(
              }
              i++;
           }
+          localStorage.removeItem('nsavefavorite');
+          localStorage.removeItem('nsaveradio');
       } 
        
        
@@ -1411,6 +1427,7 @@ var rh = new Array(
              }
              i++;
           }
+          localStorage.setItem('nsavefavorite',JSON.stringify("true"));
       }
        
       function FavoriteOff() {
@@ -1420,6 +1437,7 @@ var rh = new Array(
                 loadcontent.classList.remove("c-active-none");
              i++;
           }
+          localStorage.removeItem('nsavefavorite');
       }
         
       
@@ -1489,6 +1507,7 @@ var rh = new Array(
                 element.insertBefore(elementload,element.children[element.lastChild]);
                 i++;
              }
+             localStorage.removeItem('nsaveradio');
          } 
          else if(radiocheck == "配信順"){
              var i=0;
@@ -1497,6 +1516,7 @@ var rh = new Array(
                 element.insertBefore(elementload,element.children[element.lastChild]);
                 i++;
              }
+             localStorage.setItem('nsaveradio',JSON.stringify('1'));
          }
       }  
        
