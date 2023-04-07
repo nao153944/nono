@@ -52,6 +52,21 @@ body{
     color: hotpink;
 }
 
+.kaisuu{
+   width: 480px;
+   height: 40px;
+   text-align: left;
+   background-color: aliceblue;
+}
+
+kaisuu-text{
+   font-size: 25px;
+   font-weight: bold;
+   color: black;
+   position: relative;
+   top: 5px;
+   left: 100px;
+}
 
 
 .favorite{

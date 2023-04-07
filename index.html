@@ -458,8 +458,8 @@
 
 
 <div class ="content" id="content">
-
-              <div id="c-1-1" class="1">
+    
+        <div id="c-1-1" class="1">
            <input type="checkbox" class="checkbox" id="1-1" onclick="Save()" >
            <button class="c-button" type="button" onclick="gtag('event', 'nc-1-1'); OpenWindow('https:\/\/www.youtube.com\/watch?v=RpxW5v__ppI\x26t=88s')">
               <c-text-title id="al-c-1-1" class="安次嶺希和子">忘れじの言の葉</c-text-title><br>
@@ -12208,7 +12208,8 @@ var rh = new Array(
             i++;
          }
          var element = document.getElementById("content");
-
+         RemoveIB();
+          
          if(radiocheck == "デフォルト"){
              var i=0;
              while(i<list.length){
@@ -12233,6 +12234,8 @@ var rh = new Array(
          }
       }  
        
+      
+
        
       function SCCheck(){
             var scchecklist = new Array();
@@ -12273,7 +12276,6 @@ var rh = new Array(
             sclist[f] = {num:splitlist[i].sp1 , cnt:count}
             sclist.sort((a, b) => b.cnt - a.cnt);
           
-          
             var sc = new Array();
             var l=0 , f=0;
             while( l<sclist.length ){
@@ -12297,10 +12299,46 @@ var rh = new Array(
                 element.insertBefore(elementload,element.children[element.lastChild]);
                 i++;
              }
+          
+          var iblist = new Array({num,cnt});
+          var i=0 , l=1 , f=0;
+          iblist[f] = {num:sclist[i].num , cnt:sclist[i].cnt}
+          f++;
+          while(l<sclist.length){
+              if(sclist[i].cnt > sclist[l].cnt){
+                 iblist[f] = {num:sclist[l].num , cnt:sclist[l].cnt}
+                 f++; 
+              }
+              i++;
+              l++;
+          }
+
+          f=0;
+          while(f<iblist.length){
+             var newElement = document.createElement("div");
+             newElement.classList.add("kaisuu");
+             var newElement2 = document.createElement("kaisuu-text");
+             newElement.appendChild(newElement2);
+             var newContent = document.createTextNode(iblist[f].cnt+"回"); 
+             newElement2.appendChild(newContent);
+              
+             var ele = document.getElementsByClassName(iblist[f].num)[0];
+             var parentElement = document.getElementsByClassName("content")[0];
+             parentElement.insertBefore(newElement, ele);
+             f++;
+          }
+          
       }
        
-       
-       
+      function RemoveIB(){
+             var removecontent = document.getElementsByClassName("kaisuu");
+             if (0 < removecontent.length) {
+                while (removecontent.length) {
+                   removecontent.item(0).remove()
+                }
+             }  
+      };  
+
        
       function scrolltop(){
          window.scroll({top: 0, behavior: 'smooth'});
