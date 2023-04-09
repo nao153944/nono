@@ -12327,7 +12327,8 @@ var rh = new Array(
          }
          RadioCheck();
       } 
-       
+      
+      
        
       
       function RadioCheck(){
@@ -12433,6 +12434,14 @@ var rh = new Array(
                 i++;
              }
           
+          RemoveIB();
+          var eleFirst;
+          var i=0;
+          while(i<list.length){
+              eleFirst = document.getElementById("c-"+list[i]).classList.remove("NoClass");
+              i++;
+          }
+          
           var iblist = new Array({num,cnt});
           var i=0 , l=1 , f=0;
           iblist[f] = {num:sclist[i].num , cnt:sclist[i].cnt}
@@ -12446,6 +12455,14 @@ var rh = new Array(
               l++;
           }
 
+          
+          i=0;
+          while(i<scchecklist.length){
+              eleFirst = document.getElementById("c-"+scchecklist[i]).classList.add("NoClass");
+              i++;
+          }
+          
+          
           f=0;
           while(f<iblist.length){
              var newElement = document.createElement("div");
@@ -12454,14 +12471,28 @@ var rh = new Array(
              newElement.appendChild(newElement2);
              var newContent = document.createTextNode(iblist[f].cnt+"回"); 
              newElement2.appendChild(newContent);
-              
-             var ele = document.getElementsByClassName(iblist[f].num)[0];
+
+              var i=0;
+              while(i<list.length){
+                  loadcontent = document.getElementById("c-"+list[i]);
+                  if(loadcontent.classList.contains("NoClass") && loadcontent.classList.contains(iblist[f].num) ){
+                     var ele = loadcontent;
+                     i=0;
+                     break;
+                  }
+                  else{
+                     i++;  
+                  }
+              }
+             
              var parentElement = document.getElementsByClassName("content")[0];
              parentElement.insertBefore(newElement, ele);
              f++;
           }
+        }
+     
           
-      }
+      
        
       function RemoveIB(){
              var removecontent = document.getElementsByClassName("kaisuu");
@@ -12469,7 +12500,7 @@ var rh = new Array(
                 while (removecontent.length) {
                    removecontent.item(0).remove()
                 }
-             }  
+             }
       };  
 
        
